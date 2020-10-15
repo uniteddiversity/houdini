@@ -4,7 +4,9 @@ import {useState} from "react";
 export interface CurrentUser {
 	id: number
 }
-
+/**
+ * Information about the current user
+ */
 interface UserCurrentUserReturnType {
 	currentUser?: CurrentUser
 	signedIn:boolean

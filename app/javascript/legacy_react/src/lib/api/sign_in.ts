@@ -91,9 +91,9 @@ export default function (){
 }
 
 export class SignInError extends Error {
-  public readonly status? :number
-  public readonly data?: {error:string}
-  constructor({status, data}: {status?:number, data?:{error:string}}) {
+  public readonly status?: number
+  public readonly data?: {error:string}|{error:string}[]
+  constructor({status, data}: {status?:number, data?:{error:string}|{error:string}[]}) {
     super(`status: ${status}, data: ${JSON.stringify(data)}`);
     this.status = status;
     this.data = data;
